@@ -21,3 +21,7 @@ Channel: #hackNY
     mustache me <url>   - Adds a mustache to the specified URL. 
     pug bomb N - get N pugs 
     pug me - Receive a pug
+    find me a <technology> job in <location>
+    hn top <N> - get the top N items on hacker news
+    hn.top - refer to the top item on hn
+    hn[i] - refer to the ith item on hn
