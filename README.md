@@ -22,6 +22,11 @@ Channel: #hackNY
     pug bomb N - get N pugs 
     pug me - Receive a pug
     find me a <technology> job in <location>
-    hn top <N> - get the top N items on hacker news
-    hn.top - refer to the top item on hn
-    hn[i] - refer to the ith item on hn
+    <thing>++ - give thing some karma
+    <thing>-- - take away some of thing's karma
+    karma <thing> - check thing's karma
+    karma best - show the top 5
+    karma worst - show joey bottom 5
+    get directions <origin> <destination> - get directions between two locations
+    decide [decisions]
+    beer me <beer name> - info about a beer
