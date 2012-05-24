@@ -2,8 +2,6 @@
 #
 # take <item> - Give hubot an item to hold
 #
-Util = require "util"
-
 class BagOfHolding
   constructor: (@robot) ->
     @bag = []
