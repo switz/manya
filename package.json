@@ -18,9 +18,9 @@
   },
 
   "dependencies": {
-    "hubot": "2.2.0",
-    "hubot-irc": ">= 0.0.3",
-    "hubot-scripts": ">=2.0.4",
+    "hubot": "2.2.1",
+    "hubot-irc": ">= 0.0.8",
+    "hubot-scripts": ">=2.0.8",
     "optparse": "1.0.3"  
   }
 }
