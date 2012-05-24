@@ -30,3 +30,4 @@ Channel: #hackNY
     get directions <origin> <destination> - get directions between two locations
     decide [decisions]
     beer me <beer name> - info about a beer
+    question <question> - have manya answer your question

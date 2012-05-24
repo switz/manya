@@ -1,1 +1,1 @@
-web: bin/hubot -a irc -n manya 
+web: bin/hubot -a irc -n manya
