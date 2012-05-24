@@ -13,12 +13,12 @@ class BagOfHolding
         @capacity ?= @robot.brain.data.bagSize
 
         updateSize = ->
-          @robot.brain.data.bagSize = @capacity += 3
-        setTimeout updateSize, 600000
+          @robot.brain.data.bagSize = @capacity += 1
+        setInterval updateSize, 3600000
 
   take: (item) ->
     has = @bag.some (obj) ->
-      return obj is item
+      return obj.toLowerCase() is item.toLowerCase()
     if has
       @robot.brain.data.bag = @bag
       return "I already have one of those."
@@ -30,7 +30,7 @@ class BagOfHolding
     else
       @bag.push item
       @robot.brain.data.bag = @bag
-      return "Took the " + item + "."
+      return "Took " + item + "."
 
 module.exports = (robot) ->
   bag = new BagOfHolding robot
