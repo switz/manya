@@ -34,5 +34,5 @@ class BagOfHolding
 
 module.exports = (robot) ->
   bag = new BagOfHolding robot
-  robot.respond /take (.*)\s*$/i, (msg) ->
-    msg.send bag.take msg.match[1]
+  robot.respond /take (.*)$/i, (msg) ->
+    msg.send bag.take msg.match[1].trim()
