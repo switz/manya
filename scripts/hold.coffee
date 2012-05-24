@@ -14,7 +14,7 @@ class BagOfHolding
 
         updateSize = ->
           @robot.brain.data.bagSize = @capacity += 1
-        setTimeout updateSize, 3600000
+        setInterval updateSize, 3600000
 
   take: (item) ->
     has = @bag.some (obj) ->
