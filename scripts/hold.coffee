@@ -14,9 +14,11 @@ class BagOfHolding
 
         updateSize = ->
           @robot.brain.data.bagSize = @capacity += 1
-        setInterval updateSize, 3600000
 
   take: (item) ->
+    x = Math.floor (Math.random() * 100)
+    if x is 1
+      @robot.brain.data.bagSize = @capacity += 1
     has = @bag.some (obj) ->
       return obj.toLowerCase() is item.toLowerCase()
     if has
