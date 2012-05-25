@@ -2,6 +2,9 @@
 #
 # take <item> - Give hubot an item to hold
 #
+
+ODDS = 1/12
+
 class BagOfHolding
   constructor: (@robot) ->
     @bag = []
@@ -14,9 +17,11 @@ class BagOfHolding
 
         updateSize = ->
           @robot.brain.data.bagSize = @capacity += 1
-        setInterval updateSize, 3600000
 
   take: (item) ->
+    x = Math.random()
+    if x < ODDS
+      @robot.brain.data.bagSize = @capacity += 1
     has = @bag.some (obj) ->
       return obj.toLowerCase() is item.toLowerCase()
     if has
