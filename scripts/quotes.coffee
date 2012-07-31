@@ -55,9 +55,12 @@ class QuoteServer
         else
           responses.push "Provided ID too small or two large - there are only #{@quotes.length} quotes stored"
       else
-        id = Math.floor (Math.random() * @quotes.length)
-        responses.push (formatQuote @quotes[id])
-        responses.push (formatInfo @quotes[id])
+        if @quotes.length > 0
+          id = Math.floor (Math.random() * @quotes.length)
+          responses.push (formatQuote @quotes[id])
+          responses.push (formatInfo @quotes[id])
+        else
+          responses.push "No quotes stored"
     else if matches[2] is "quote"
       user = matches[1]
       userQuotes = (x for x in @quotes when x.speaker is user)
